@@ -6,26 +6,36 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class MainController {
-    @FXML
-    private Label welcomeText;
 
-    @FXML
-    public void startButtonClick() {
+    private Button startButton, quitButton;
 
-        System.out.println("Start button pressed.");
+    //METHODS
+
+    public void startButtonClick(ActionEvent actionEvent) throws IOException {
+
+        Parent mapView = FXMLLoader.load(getClass().getResource("MapScene.fxml"));
+        Scene mapViewScene = new Scene(mapView);
+
+        Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+
+        window.setScene(mapViewScene);
+        window.show();
+
+
+        //System.out.println("Start button pressed.");
 
     }
 
     @FXML
     public void quitButtonClick() {
 
-        System.out.println("Thank you. Goodbye!");
+        System.out.println("Thank you for being interested in the truth of our history. Goodbye!");
         System.exit(0);
     }
 }
