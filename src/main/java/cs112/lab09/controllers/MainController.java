@@ -1,14 +1,31 @@
 package cs112.lab09.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class MainController {
     @FXML
     private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void startButtonClick() {
+
+        System.out.println("Start button pressed.");
+
+    }
+
+    @FXML
+    public void quitButtonClick() {
+
+        System.out.println("Thank you. Goodbye!");
+        System.exit(0);
     }
 }

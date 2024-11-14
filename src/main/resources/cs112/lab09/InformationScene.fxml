@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <ImageView fitHeight="248.0" fitWidth="279.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../images/sanfrancisco.jpg" />
+         </image></ImageView>
+   </left>
+   <right>
+      <BorderPane prefHeight="304.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+         <top>
+            <VBox alignment="TOP_CENTER" prefHeight="88.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="locationLabel" text="San Francisco, CA" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="dateLabel" text="5/15/1919" />
+               </children></VBox>
+         </top>
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="The following &quot;history&quot; was told for many years: a minor riot between black and white soldiers occurred in the Presidio in San Francisco." textAlignment="CENTER" wrapText="true" />
+                  <Label text="By correcting history, not just rewriting it, we are revising it to embark on the process of righting a wrong. Here is the revised history: a minor riot between black and white soldiers occurred in the Presidio in San Francisco after a dispute abnout a Thai soldier who was moved from the &quot;colored quarters&quot; to the white military housing. Despite defending our country, housing for black soldiers was not only segregated, but often inferior. Black soldiers also faced increased attacks and other forms of discrimination uppon returning from home." textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin></Label>
+               </children></VBox>
+         </center></BorderPane>
+   </right>
+   <bottom>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Close" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
