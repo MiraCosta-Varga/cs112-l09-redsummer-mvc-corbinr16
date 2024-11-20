@@ -1,23 +1,53 @@
 package cs112.lab09.controllers;
 
+import cs112.lab09.MainApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.image.ImageView;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
 
 public class MapController {
 
     @FXML
-    protected void infoButtonOneClick() {
+    private Button infoButton1, infoButton2;
 
-        System.out.println("Button 1 clicked.");
+    @FXML
+    protected void infoButtonOneClick() throws IOException {
+
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApplication.class.getResource("InformationScene.fxml"));
+        Parent eventViewParent = loader.load();
+
+        Stage popupStage = new Stage();
+
+        popupStage.initModality(Modality.APPLICATION_MODAL); //locks screen to current popup window
+
+        popupStage.setScene(new Scene(eventViewParent));
+
+        popupStage.show();
 
     }
 
     @FXML
-    protected void infoButtonTwoClick() {
+    protected void infoButtonTwoClick() throws IOException {
 
-        System.out.println("Button 2 clicked.");
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApplication.class.getResource("InformationScene.fxml"));
+        Parent eventViewParent = loader.load();
+
+        Stage popupStage = new Stage();
+
+        popupStage.initModality(Modality.APPLICATION_MODAL); //locks screen to current popup window
+
+        popupStage.setScene(new Scene(eventViewParent));
+
+        popupStage.show();
 
     }
 }
