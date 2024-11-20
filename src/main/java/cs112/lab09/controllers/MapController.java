@@ -1,6 +1,8 @@
 package cs112.lab09.controllers;
 
 import cs112.lab09.MainApplication;
+import cs112.lab09.models.Date;
+import cs112.lab09.models.RevisedHistoricalEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -24,6 +26,10 @@ public class MapController {
         loader.setLocation(MainApplication.class.getResource("InformationScene.fxml"));
         Parent eventViewParent = loader.load();
 
+        EventController eventController = loader.getController();
+        eventController.initData("San Francisco, CA", new RevisedHistoricalEvent("This is a description of the event", new Date(5,15,1919), "This is a revised description.", "this is a citation"));
+
+
         Stage popupStage = new Stage();
 
         popupStage.initModality(Modality.APPLICATION_MODAL); //locks screen to current popup window
@@ -40,6 +46,9 @@ public class MapController {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(MainApplication.class.getResource("InformationScene.fxml"));
         Parent eventViewParent = loader.load();
+
+        EventController eventController = loader.getController();
+        eventController.initData("San Francisco, CA", new RevisedHistoricalEvent("This is a description of the event", new Date(7,13,1919), "This is a revised description.", "this is a citation"));
 
         Stage popupStage = new Stage();
 
