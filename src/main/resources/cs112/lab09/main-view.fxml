@@ -20,10 +20,7 @@
             <Font name="System Bold" size="13.0" />
          </font></Label>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="288.0" prefWidth="310.0" text="In 1919, Red Summer was a pattern of white-on-black violence that occurred in more than three dozen cities across the United States and in one rural county in Arkansas. The term &quot;Red Summer&quot; was coined by the civil rights activist and author James Welcome Johnson, who had been employed as a field secretary by the National Association for the Advancement of Colored People (NAAACP) since 1916. It was branded &quot;Red Summer&quot; because of the bloodshed that occurred during the worst white-on-black violence in U.S. history." textAlignment="CENTER" wrapText="true" />
-      <ImageView fitHeight="172.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/Red-Summer.jpg" />
-         </image></ImageView>
+      <ImageView fx:id="logoImageView" fitHeight="172.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
             <Button fx:id="startButton" mnemonicParsing="false" onAction="#startButtonClick" prefHeight="30.0" prefWidth="60.0" text="Start">
