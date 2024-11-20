@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.lab09.controllers.EventController">
+   <left>
+      <ImageView fitHeight="248.0" fitWidth="279.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <BorderPane prefHeight="304.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+         <top>
+            <VBox alignment="TOP_CENTER" prefHeight="88.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="locationLabel" text="LocationLabel" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="dateLabel" text="DateLabel" />
+               </children></VBox>
+         </top>
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="descriptionLabel" text="DescriptionLabel" textAlignment="CENTER" wrapText="true" />
+                  <Label fx:id="revisedDescriptionLabel" text="RevisedDescriptionLabel" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin></Label>
+               </children></VBox>
+         </center></BorderPane>
+   </right>
+   <bottom>
+      <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeButtonClick" text="Close" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
